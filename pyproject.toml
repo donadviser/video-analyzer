@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video_analyzer"
+version = "0.1.0"
+authors = [
+  { name="donadviser", email="donadviser@gmail.com" }, # Updated from original setup.py
+]
+description = "A simple video analyzer package."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+# Dependencies are moved here from requirements.txt
+dependencies = [
+    "faster-whisper>=0.6.0",
+    "numpy>=1.24.0",
+    "openai-whisper>=20231117",
+    "opencv-python>=4.8.0",
+    "pillow>=10.0.0",
+    "pydub>=0.25.1",
+    "requests>=2.31.0",
+    "torch>=2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/donadviser/video-analyzer"
+
+# Defines the command-line script
+[project.scripts]
+video-analyzer = "video_analyzer.cli:main"
